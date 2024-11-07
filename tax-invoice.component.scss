@@ -1,0 +1,245 @@
+
+.taxinvoice {
+  width: 80%;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9; /* Light greyish background */
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header: Company Logo and Title side by side */
+.taxinvoice .header {
+  display: flex;
+  align-items: center; /* Vertically center */
+  justify-content: space-between; /* Space between logo and title */
+  margin-bottom: 30px;
+}
+
+.taxinvoice .header img {
+  width: 120px;
+  height: auto;
+}
+
+.taxinvoice .header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+/* Section Headings: Bold and Styled */
+.details strong, 
+.invoice-details strong,
+.amount strong,
+.bankDetails strong {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Company and Vendor Details Side by Side */
+.details {
+  display: flex;
+  justify-content: space-between; /* Spread out company and vendor details */
+  margin-bottom: 30px;
+}
+
+.companyDetails, .vendorDetails {
+  width: 48%; 
+  padding: 15px;
+  margin-right: 50px;
+  background-color: #f4f4f4; /* Light grey background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.companyDetails p, .vendorDetails p {
+  margin: 6px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.companyDetails p span, .vendorDetails p span {
+  font-weight: normal;
+  color: #555;
+}
+
+.companyDetails strong, .vendorDetails strong {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+
+.invoice-details {
+  width: 90%;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f4f4f4; 
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-details .number p, 
+.invoice-details .dates p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.invoice-details .number span, 
+.invoice-details .dates span {
+  font-weight: normal;
+  color: #555;
+}
+
+/* Invoice Table */
+.Invoicetable table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.Invoicetable th, .Invoicetable td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.Invoicetable th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.Invoicetable td {
+  background-color: #fff;
+}
+
+/* Amount Table */
+.amounttable table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+.amounttable th, .amounttable td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.amounttable th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.amounttable td {
+  background-color: #fff;
+}
+
+
+.bankDetails {
+  width: 90%;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f4f4f4; 
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Bank Details Section */
+.bankDetails p {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.bankDetails p span {
+  font-weight: normal;
+  color: #555;
+}
+
+.bankDetails strong {
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top:10px;
+}
+
+
+.amount {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 30px;
+  color: #333;
+}
+
+.amount span {
+  font-size: 14px;
+  font-weight: normal;
+  color: #555;
+}
+
+.edit input[type="button"] {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 20px;
+    width:25%;
+    margin-left: 30%;
+  }
+  
+  .edit input[type="button"]:hover {
+    background-color:  #0056b3;
+  }
+  
+
+
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .taxinvoice {
+      width: 95%;
+      padding: 15px;
+  }
+
+  .taxinvoice .header {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .details {
+      flex-direction: column;
+      margin-bottom: 20px;
+  }
+
+  .companyDetails, .vendorDetails {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .Invoicetable table, .amounttable table {
+      font-size: 12px;
+  }
+
+  .taxinvoice .header h1 {
+      font-size: 24px;
+  }
+
+  .companyDetails p, .vendorDetails p, .invoice-details p, .bankDetails p {
+      font-size: 12px;
+  }
+
+  .amount {
+      font-size: 16px;
+  }
+}

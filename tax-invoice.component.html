@@ -1,0 +1,128 @@
+
+<div class="taxinvoice">
+<div class="header">
+    <img [src]="companyObj.logo" alt="Company Logo">
+    <h1>Tax Invoice</h1>
+</div>
+
+<div class="details">
+
+<div class="companyDetails"> 
+    <strong>Company Details</strong>
+    <p>Company Name : <span> {{companyObj.companyName}}</span></p>
+    <p>Company PAN : <span>{{companyObj.companyPAN}} </span></p>
+    <p>E-mail : <span> {{companyObj.email}}</span></p>
+    <p>Address : <span> {{companyObj.companyAddress}}</span></p>
+    <p>Contact : <span> {{companyObj.contact}}</span></p>
+</div>
+    <div class="vendorDetails">
+       <strong>Vendor Details</strong>
+        <p>Buyer Name : <span> 12345</span></p>
+        <p>E-mail : <span> 12345</span></p>
+        <p>Address : <span> 12345</span></p>
+        <p>Contact : <span> 12345</span></p>
+    
+    </div>
+</div>
+
+
+ <div class="invoice-details">
+<div class="details"><strong>Invoice Details</strong></div>
+<div class="number"> 
+    <p>Invoice No. : <span> 12345</span></p>
+    <p>Reference No: <span> 12345</span></p>
+    <p>Delivery Date : <span> 12345</span></p>
+    
+</div>
+<div class="dates">
+    <p>Invoice Date : <span> 12345</span></p>
+    <p>Payment due date : <span> 12345</span></p>
+  
+</div>
+</div> 
+
+
+
+<div class="Invoicetable">
+    <table>
+        <thead>
+            <th>Sr.No.</th>
+            <th>Item Name</th>
+            <th>HSN/SAC</th>
+            <th>Quantity</th>
+            <th>Rate</th>
+            <th>GST</th>
+            <th>Amount</th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of invoice;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{item.particulars}}</td>
+            <td>{{item.hsnsac}}</td>
+            <td>{{item.quantity}}</td>
+            <td>{{item.rate}}</td>
+            <td>{{item.gst}}</td>
+            <td>{{item.amount}}</td>
+           
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="amount">
+    <p>Amount Chargeable(in words) <span></span></p> 
+</div>
+
+<div class="amounttable">
+<table>
+    <tr>
+        <th>HSN/SAC</th>
+        <th>Taxable Value</th>
+        <th colspan="2">CGST
+        <th colspan="2">SGST/UTGST
+        <th>Total Tax Amount</th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th>Rate</th>
+        <th>Amount</th>
+        <th>Rate</th>
+        <th>Amount</th>
+        <th></th>
+        
+        </tr>
+        <tr *ngFor="let item of invoice">
+            
+            <td>{{item.hsnsac}}</td>
+            <td>-</td>
+            <td>9%</td>
+            <td>0</td>
+            <td>9%</td>
+            <td>0</td>
+            <td>0.00</td>
+      
+        </tr>
+        <tr>
+            <th>Total</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>0</th>
+        </tr>
+</table>
+</div>
+<div class="bankDetails">
+    <strong>Bank Details</strong>
+    <p>Bank Name : <span> 12345</span></p>
+    <p>Bank Account Number : <span> 12345</span></p>
+    <p>IFSC Code: <span> 12345</span></p>
+    <p>Account Holders Name : <span> 12345</span></p>
+    
+</div>
+
+<div class="edit"> <input type="button" value="Edit"></div>
+
+</div>
+
